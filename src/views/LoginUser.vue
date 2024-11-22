@@ -41,7 +41,7 @@ import axios from 'axios'
                         localStorage.setItem('token', res.data.token)
                         this.$router.push({name: "home"})
                     }).catch(err => {
-                        var MSGerror = err.response.data.err
+                        var MSGerror = err.response.data.erro
                         this.error = MSGerror;
                     })
             }
