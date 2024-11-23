@@ -40,7 +40,7 @@ import axios from 'axios'
                         email: this.email,
                         password: this.password
                     }).then(res => {
-                        console.log(res)
+                        console.log(res.data)
                         this.$router.push({name: "home"})
                     }).catch(err => {
                         var MSGerror = err.response.data.err
