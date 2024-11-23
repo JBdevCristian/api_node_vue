@@ -4,6 +4,7 @@ import About from '../views/AboutView.vue';
 import RegisterUser from '../views/RegistrarUser.vue'
 import Login from '../views/LoginUser.vue'
 import User from '../views/UserU.vue'
+import Edit from '../views/editUsers.vue'
 import axios from 'axios'
 
 function adminAuth(to, from, next) {
@@ -49,7 +50,14 @@ const routes = [
   },
   {
     path: '/admin/user',
+    name: 'Users',
     component: User,
+    beforeEnter: adminAuth
+  },
+  {
+    path: '/admin/user/edit/:id',
+    name: 'UserEdit',
+    component: Edit,
     beforeEnter: adminAuth
   }
 ]

@@ -16,7 +16,7 @@
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ processRole(user.role) }}</td>
-                        <td><button class="button is-success">Editar</button> | <button class="button is-danger" @click="shoowModal(user.id)">Deletar</button></td>
+                        <td><a class="button is-success" :href="'/admin/user/edit/'+ user.id">Editar</a> | <button class="button is-danger" @click="shoowModal(user.id)">Deletar</button></td>
                     </tr>
                 </tbody>
             </table>
